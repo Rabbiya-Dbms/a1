@@ -1,0 +1,24 @@
+# a1
+warshall algorithm implementation
+
+def warshall(a):
+    n = len(a)
+    dis_matrix = a
+    for k in range(n):
+        ndis_matrix = [list(row) for row in dis_matrix] 
+        for i in range(n):
+            for j in range(n):
+            
+                ndis_matrix[i][j] = min(dis_matrix[i][j], dis_matrix[i][k] + dis_matrix[k][j])
+        dis_matrix = ndis_matrix
+    return dis_matrix
+
+
+matrix = [
+    [0, 0, 0, 1],
+    [1, 0, 1, 0],
+    [1, 0, 0, 1],
+    [0, 0, 1, 0]
+]
+
+print(warshall(matrix))
