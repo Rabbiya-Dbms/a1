@@ -1,0 +1,39 @@
+Floyds Transitive Closure:
+class Floyd: 
+
+	def __warshall__(s, n): 
+		s.V = n 
+
+	def printSolution(self, reach): 
+		print ("Following matrix transitive closure of the given matrix ")	 
+		for i in range(s.V): 
+			for j in range(s.V): 
+				print ([i][j]), 
+			
+	
+	
+	def transitiveClosure(self,matrix): 
+	
+		a =[i[:] for i in matrix] 
+	
+		for k in range(self.V): 
+			
+			for i in range(self.V): 
+				
+			
+				for j in range(self.V): 
+					
+					
+					a[i][j] = a[i][j] or (a[i][k] and a[k][j]) 
+
+		self.printSolution(a) 
+		
+m= Floyd(4) 
+
+matrix = [[1, 1, 0, 1], 
+		[0, 1, 1, 0], 
+		[0, 0, 1, 1], 
+		[0, 0, 0, 1]] 
+
+m.transitiveClosure(matrix) 
+
